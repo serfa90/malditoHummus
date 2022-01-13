@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;500&display=swap');
+$amarillo: #FFBE00;
+$fuenteTitulo: 'Anton', sans-serif, 'Bebas Neue';
+@mixin fuente {
+     font-family: $fuenteTitulo;
+     font-weight: lighter;
+     color: $amarillo;   
+}
+@mixin hoverImagenes {
+     text-align: center;
+     position: absolute;
+     color: black;
+     font-weight: bolder;
+     font-family: 'Roboto';
+     background-color: rgba($color: #FFBE00, $alpha: 0.6);
+     padding-top: 40%; 
+     margin-top: 1.8%;
+     opacity: 0;
+}
+/*Color de fondo Body*/
+body{
+    background-image: url(../Imagenes/hummusBack-min.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+/*Header*/
+header{
+    padding-top: 4%;
+    padding-bottom: 2.5%;
+    background-color: rgba(37, 37, 37, 0.7);
+}
+/*Títulos y subtitulos*/
+.subTitulo{
+    @include fuente;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 10px;
+    border: $amarillo solid 1px;
+    background-color: #252525;
+    margin-bottom: 5%;
+}
+.titulo{
+    @include fuente;
+    font-size: 35px;
+    text-align: center;
+}
+    /*Secciones Home*/
+    .seccionHome{
+        border-bottom: $amarillo solid 2px;
+        overflow: hidden;
+        padding-top: 2%;
+        width: 100%;
+        background-image: url(../Imagenes/FondoMadera.jpg);
+        margin-left: 0.01%;
+             h2{ @include fuente;
+                 text-decoration: none;
+                font-size: 40px;
+        }
+             div{
+                font-size: 25px;
+                font-family: 'Roboto', sans-serif; font-weight: 350;
+                color: white;
+            }
+    }
+    @media (min-width: 992px){
+        #jalapeno {
+            display: none;
+        }
+        #tostada{
+            display: none;
+        }
+        .imagen:hover{
+            transform: scale(1.1)
+        }
+        .textoImagenes{
+            @include hoverImagenes;
+            height: 97%;
+            width: 88.3%;
+            font-size: 1.2rem;
+            margin-top: 2.5%;
+        }
+        .textoProductos{
+            @include hoverImagenes;
+            width: 88.5%;
+            height: 97%;
+            font-size: 1.2rem;
+            margin-left: 1%;
+        }
+        .subTitulo{
+            font-size: 40px;
+        }
+    }
+    @media (max-width: 992px){
+        .seccionHome{
+            h2{ @include fuente;
+                text-decoration: none;
+               font-size: 30px;
+       }
+            div{
+               font-size: 20px;
+               font-family: 'Roboto', sans-serif; font-weight: 350;
+               color: white;
+           }
+        }
+        .textoImagenes{
+            @include hoverImagenes;
+            height: 97.5%;
+            width: 75.5%;
+            font-size: 23px;
+            margin-top: 2%;
+        }   
+        .imagen{
+            margin-left: 1%;
+        }
+        .textoProductos{
+            @include hoverImagenes;
+            width: 82%;
+            height: 94.8%;
+            font-size: 16px;
+            margin-left: 1.6%;
+            margin-top: 4%;
+        }
+        .titulo{
+            font-size: 25px;
+        }
+        .subTitulo{
+            font-size: 33px;
+        }
+    }
+    @media (max-width: 768px){
+        .textoImagenes{
+            @include hoverImagenes;
+            height: 96.6%;
+            width: 86.9%;
+            font-size: 23px;
+            margin-top: 3%;
+        }   
+        .imagen{
+            margin-left: 1%;
+        }
+        .textoProductos{
+            @include hoverImagenes;
+            width: 87.5%;
+            height: 97%;
+            font-size: 23px;
+            margin-left: 1.6%;
+        }
+        .titulo{
+            font-size: 25px;
+        }
+        .subTitulo{
+            font-size: 35px;
+        }
+    }
+    @media (min-width: 577px){
+        #mobile{
+            display: none
+        }
+        .puntosDeVenta{
+            font-size: 25px;
+        }
+    }
+    @media (max-width: 576px){   
+    .puntosDeVenta{
+        font-size: 16px;
+    }
+    .form-control{
+        margin-left: 10%;
+    }
+    .btn{
+        margin-left: 10%;
+    }
+    .form-label{
+        margin-left: 10%;
+    }
+        #desktop{
+            display: none;
+        }
+    .seccionHome{
+        h2{ @include fuente;
+            text-decoration: none;
+           font-size: 24px;
+   }
+        div{
+           font-size: 16px;
+           font-family: 'Roboto', sans-serif; font-weight: 350;
+           color: white;
+       }
+       .subTitulo{
+           font-size: 10px;
+       }
+       .textoImagenes{
+        @include hoverImagenes;
+        height: 94%;
+        width: 80%;
+        font-size: 16px;
+        margin-top: 4%;
+        font-weight: bolder;
+    }
+    #mantenete{
+        font-size: 14px;
+    }
+}
+.textoProductos{
+    @include hoverImagenes;
+    height: 94.5%;
+    width: 80.5%;
+    font-size: 16px;
+    margin-top: 4%;
+    font-weight: bolder;
+    margin-left: 1.8%;
+}
+    .vegetales{
+       display: none;
+    }
+    /*Página productos*/
+    .titulo{
+        font-size: 23px;
+    }
+    .subTitulo{
+        font-size: 32px;
+    }
+    #gmap_canvas{
+         height: 150px;
+         margin-bottom: 8%;
+         margin-top: 5%;
+         margin-left: 7%;
+    }
+}
+/*Efectos y diseño de imágenes*/
+    .imagen{
+     margin-bottom: 5%;
+     margin-top: 2%;
+     margin-right: 1%;
+     align-items: center;
+     display: flex;
+     position: relative;
+    }
+    .textoImagenes:hover{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .vegetales{
+        padding-bottom: 20%;
+    }
+/*Registro Home*/
+.registro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+     p{  
+        margin-top: 3%;
+        margin-bottom: 2%;
+        width: 400px;
+        text-align: center;
+        color: $amarillo;
+        font-size: 20px;
+    }
+}
+#contacto{
+    margin-top: 2%;
+    margin-bottom: 6%;
+    font-size: 18px;
+    width: 125px;
+    border: 1px #FFBE00;
+    a{
+        color: $amarillo;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover{
+        color: #252525;
+    }
+}
+#contacto:hover{
+background-color: $amarillo;
+}
+/*Estilos página Productos y recetas*/
+.fondoProductos{
+    background-image: url(../Imagenes/FondoMadera.jpg);
+    margin-right: 0%;
+    padding-top: 3%;
+}
+.textoProductos:hover{
+    opacity: 0.7;
+    transition: 0.5s;
+}
+h4 {
+    color: #FFBE00;
+    font-family: $fuenteTitulo;
+    font-size: 35px;
+    text-align: center;
+}
+#textoRecetas{
+    text-align: center;
+}
+/*Estilos footer*/
+#logoPie{
+    margin-top: 1%;
+    float: left;
+}
+.menuPie{
+    list-style: none;
+    width: 28vh;
+    margin-bottom: 1.5%;
+    padding-top: 1%;
+}
+.redesPie{
+    float: right;
+    width: 65px;
+    margin-top: 1%;
+}
+#derechos{
+    color: white;
+}
+footer{
+    background-color: rgba(37, 37, 37, 0.7)
+}
+ /*Estilo menú footer*/   
+ li{
+    text-align: center;
+     a{
+         text-decoration: none;
+         color: $amarillo;
+         font-weight: bolder;
+     }
+     a:hover{
+         color: rgb(99, 2, 2);
+         font-weight: bolder;
+         text-decoration: none;
+     }
+}
+/*Estilos Página contacto*/
+.contactoBody{
+    background-image: url(../Imagenes/Fondo.png);
+    
+}
+.registroMail{
+width: 99.9%;
+height: 30rem;
+padding-top: 2%;
+padding-bottom: 20%;
+background-image: url(../Imagenes/FondoMadera.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+    button {
+        display: flex;
+        align-self: flex-end;
+        margin-top: 4%;
+    }
+    .contactoPag{
+        border: $amarillo solid 1px;
+    }
+    .form-label{
+        padding-top: 10%;
+    }
+}
+/*Estilos Puntos De Venta*/
+.contenedorPuntos{
+    background-image: url(../Imagenes/FondoMadera.jpg);
+    padding: 2% 0% 2% 0%
+}
+.puntosDeVenta{
+    @include fuente;
+}
+#gmap_canvas{
+    height: 500px;
+    width: 600px;
+}
